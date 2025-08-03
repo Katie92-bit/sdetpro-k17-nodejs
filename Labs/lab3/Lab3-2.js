@@ -1,20 +1,35 @@
-myArray = [3, 2, 3, 4, 5];
+let myArray = [5, 5, 5, 5, 5];
 
 let minElement = myArray[0];
 let maxElement = myArray[0];
+let minValueIndexes = [0];
+let maxValueIndexes = [0];
 
 for (let index = 0; index < myArray.length; index++) {
-    if (minElement >= myArray[index]) {
-        minElement = myArray[index];
+    const currentValue = myArray[index];
+    if (minElement > currentValue) {
+        minElement = currentValue;
+        minValueIndexes = [];
+        minValueIndexes.push(index);
+    } else if (currentValue === minElement) {
+        minValueIndexes.push(index);
+    }
+
+    if (maxElement < currentValue) {
+        maxElement = currentValue;
+        maxValueIndexes = [];
+        maxValueIndexes.push(index);
+    } else if (currentValue === maxElement) {
+        maxValueIndexes.push(index);
+
     }
 }
-console.log(`Min value: ${minElement}`);
 
-for (let index = 0; index < myArray.length; index++) {
-    if (maxElement <= myArray[index]) {
-        maxElement = myArray[index];
-    }
+if (minElement===maxElement){
+    console.log(`All elements have same value ${minElement}`);
+    
 }
-
-console.log(`Max value: ${maxElement}`);
-
+else {
+    console.log(`Min value: ${minElement}, min Value Indexes: ${minValueIndexes}`);
+    console.log(`Max value: ${maxElement}, max Value Indexes: ${maxValueIndexes}`);
+}

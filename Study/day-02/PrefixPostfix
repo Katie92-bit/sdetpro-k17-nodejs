@@ -1,0 +1,18 @@
+//++, -- Incremental/ Decremental
+//let a=1;
+//Prefix
+//let myNumber =++a; //=2
+//Postfix
+myNumber =a++; // =1
+console.log(myNumber);
+
+let a=1;
+let b=2;
+let c= ++a + b++;
+
+// Prefix > right operand > assignment > postfix
+console.log (` a= ${a}, b= ${b}, c= ${c}`);
+
+
+
+
