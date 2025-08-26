@@ -81,10 +81,9 @@ async function getAllPosts(userId) {
     const response = await fetch(POST_ENDPOINT);
     const postResponse = await response.json();
 
-    const userRelatedPosts = postResponse.filter(
-        (post) => post.userId === userId
-    );
-
+    const userRelatedPosts = postResponse.filter(function (post) {
+        return post.userId === userId
+    });
     return {
         existUser: true,
         userRelatedPosts: userRelatedPosts,
