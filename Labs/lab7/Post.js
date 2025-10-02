@@ -7,20 +7,28 @@ class Post {
         this._body = body;
     }
 
-    get userId(){
+    get userId() {
         return this._userId;
     }
 
-    get id(){
+    get id() {
         return this._id;
     }
 
-    get title(){
+    get title() {
         return this._title;
     }
 
-    get body(){
+    get body() {
         return this._body;
+    }
+
+    set userId(userId) {
+        this._userId = userId;
+    }
+
+    set id(id) {
+        this._id = id;
     }
 }
 module.exports = Post;
