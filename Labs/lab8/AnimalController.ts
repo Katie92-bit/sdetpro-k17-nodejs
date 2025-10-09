@@ -1,17 +1,17 @@
 import Animal from "./Animal";
-import CompareSpeed from "./CompareSpeed";
+import CompareSpeed from "./RacingController";
 import Dog from "./Dog";
 import Horse from "./Horse";
 import Tiger from "./Tiger";
 
 //Construct data
-let dog = new Dog("Dog", Math.floor(Math.random() * 60) + 1);
-let tiger = new Tiger("Tiger", Math.floor(Math.random() * 100) + 1);
-let horse = new Horse("Horse", Math.floor(Math.random() * 75) + 1);
+let dog = new Dog();
+let tiger = new Tiger();
+let horse = new Horse();
 
 // Construct controller
 let compareSpeed = new CompareSpeed();
-let fastestAnimal = compareSpeed.findFastestAnimal([dog, tiger, horse]);
+let fastestAnimal = compareSpeed.getWinner([dog, tiger, horse]);
 
 console.log(`Dog's speed ${dog.getSpeed()}`);
 console.log(`Tiger's speed ${tiger.getSpeed()}`);

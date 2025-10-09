@@ -5,14 +5,13 @@ export default class Animal {
     constructor(animalName: string, speed: number) {
         this.animalName = animalName;
         this.speed = speed;
-
     }
 
-    public setName(animalName: string) {
+    protected setName(animalName: string) {
         this.animalName = animalName;
     }
 
-    public setSpeed(speed: number) {
+    protected setSpeed(speed: number) {
         this.speed = speed;
     }
 
@@ -24,4 +23,7 @@ export default class Animal {
         return this.speed;
     }
 
+    protected generateRandomSpeed(){
+        
+    }
 }
