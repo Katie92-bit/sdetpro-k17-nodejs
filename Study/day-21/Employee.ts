@@ -4,10 +4,13 @@ export default class Employee {
 
     protected name: string = 'Employee';
     protected salary: number; //private, protected, public
-    protected bonus: number = 0;
-    protected workingDays: number = 0;
-    constructor(salary: number) { // không có init giá trị thì p có constructor
+    protected bonus: number;
+    protected workingDays;
+    // không có init giá trị thì p có constructor
+    constructor(salary: number, workingDays: number) {
         this.salary = salary;
+        this.bonus = 0;
+        this.workingDays = workingDays;
     }
 
     public getSalary() {

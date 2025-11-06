@@ -7,11 +7,10 @@ import SalaryController from "./SalaryController";
 //Construct data
 //const MAX_BONUS=1000;
 const teo = new FTE (20000, 250);
-console.log(`Teo's bonus: ${teo.getBonus}`);
-
+console.log(`Teo's bonus: ${teo.getBonus()}`);
 
 const ti = new PartimeEmployee (19000, 200);
-console.log(`Ti's bonus: ${ti.getBonus}`);
+console.log(`Ti's bonus: ${ti.getBonus()}`);
 
 
 //Construct controller
